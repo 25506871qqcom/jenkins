@@ -18,7 +18,7 @@ public class SampleController extends SpringBootServletInitializer {
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        return "Hello 2 World!";
+        return "Hello 23 World!";
     }
 
     @Override
