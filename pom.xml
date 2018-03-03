@@ -34,69 +34,88 @@
         </dependency>
     </dependencies>
 
+
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.sql</include>
-                    <include>**/*.xml</include>
-                    <include>**/*.yaml</include>
-                    <include>**/*.properties</include>
-                    <include>**/spring.handlers</include>
-                    <include>**/spring.schemas</include>
-                    <include>**/services/**</include>
-                    <include>**/jssecacerts</include>
-                    <include>**/*.p12</include>
-                    <include>**/*.vm</include>
-                    <include>**/lib/*.jar</include>
-                </includes>
-            </resource>
-        </resources>
+        <finalName>jk</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.5.2.RELEASE</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <encoding>UTF-8</encoding>
                 </configuration>
+                <version>3.1</version>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
+        </plugins>
+    </build>
+
+    <!--<build>-->
+        <!--<resources>-->
+            <!--<resource>-->
+                <!--<directory>src/main/resources</directory>-->
+                <!--<filtering>true</filtering>-->
+                <!--<includes>-->
+                    <!--<include>**/*.sql</include>-->
+                    <!--<include>**/*.xml</include>-->
+                    <!--<include>**/*.yaml</include>-->
+                    <!--<include>**/*.properties</include>-->
+                    <!--<include>**/spring.handlers</include>-->
+                    <!--<include>**/spring.schemas</include>-->
+                    <!--<include>**/services/**</include>-->
+                    <!--<include>**/jssecacerts</include>-->
+                    <!--<include>**/*.p12</include>-->
+                    <!--<include>**/*.vm</include>-->
+                    <!--<include>**/lib/*.jar</include>-->
+                <!--</includes>-->
+            <!--</resource>-->
+        <!--</resources>-->
+        <!--<plugins>-->
             <!--<plugin>-->
-                <!--<groupId>org.codehaus.mojo</groupId>-->
-                <!--<artifactId>animal-sniffer-maven-plugin</artifactId>-->
-                <!--<version>1.15</version>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<version>1.5.2.RELEASE</version>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
                 <!--<configuration>-->
-                    <!--<signature>-->
-                        <!--<groupId>org.codehaus.mojo.signature</groupId>-->
-                        <!--<artifactId>java18</artifactId>-->
-                        <!--<version>1.0</version>-->
-                    <!--</signature>-->
+                    <!--<skip>true</skip>-->
                 <!--</configuration>-->
             <!--</plugin>-->
-        </plugins>
+            <!--<plugin>-->
+                <!--<artifactId>maven-compiler-plugin</artifactId>-->
+                <!--<version>3.5</version>-->
+                <!--<configuration>-->
+                    <!--<source>1.8</source>-->
+                    <!--<target>1.8</target>-->
+                    <!--<encoding>UTF-8</encoding>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-resources-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<encoding>UTF-8</encoding>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+            <!--&lt;!&ndash;<plugin>&ndash;&gt;-->
+                <!--&lt;!&ndash;<groupId>org.codehaus.mojo</groupId>&ndash;&gt;-->
+                <!--&lt;!&ndash;<artifactId>animal-sniffer-maven-plugin</artifactId>&ndash;&gt;-->
+                <!--&lt;!&ndash;<version>1.15</version>&ndash;&gt;-->
+                <!--&lt;!&ndash;<configuration>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<signature>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<groupId>org.codehaus.mojo.signature</groupId>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<artifactId>java18</artifactId>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<version>1.0</version>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</signature>&ndash;&gt;-->
+                <!--&lt;!&ndash;</configuration>&ndash;&gt;-->
+            <!--&lt;!&ndash;</plugin>&ndash;&gt;-->
+        <!--</plugins>-->
 
-        <finalName>jk</finalName>
-    </build>
+        <!--<finalName>jk</finalName>-->
+    <!--</build>build-->
 </project>
